@@ -1,0 +1,342 @@
+@media (max-width: 1440px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 1200px) {
+  #back .back--thero__img img {
+    width: 100%;
+    height: auto;
+  }
+  #back .back--thero__img1--img12 {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  #header .header {
+    width: 92%;
+  }
+  #logo .logo--group h1 {
+    font-size: 62px;
+  }
+  #link .link--state__img {
+    width: 46%;
+  }
+  #read .read--thew h1 {
+    font-size: 165px;
+  }
+  #grown .grown--roth {
+    flex-direction: column;
+    align-items: center;
+  }
+  #white .white {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  #logo .logo--group__image {
+    top: 76px;
+  }
+  #logo .logo--group__btn {
+    width: 35%;
+  }
+  #link .link--state__the {
+    width: 50%;
+  }
+  #read .read--thew h1 {
+    font-size: 119px;
+  }
+  #back .back--white__one img {
+    width: 40%;
+  }
+  #header .header--menu {
+    display: none;
+  }
+  #link .link--ing22 {
+    width: 40%;
+  }
+  #logo .logo--group__btn--btn3 {
+    height: 453px;
+    width: 458px;
+  }
+  #link .link--woths {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  #logo .logo--group__btn--btn3 {
+    left: 8%;
+  }
+  #link .link--state {
+    flex-direction: column;
+  }
+  #link .link--state__img {
+    width: 69%;
+    padding: 20px 0;
+  }
+  #link .link--state__the {
+    width: 63%;
+    padding: 10px;
+  }
+  #hero .hero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 19px 0;
+  }
+}
+@media (max-width: 450px) {
+  #logo .logo--group__btn--btn3 {
+    left: 7%;
+    top: 29%;
+    height: 406px;
+    width: 393px;
+  }
+  #logo .logo--group h1 {
+    font-size: 54px;
+  }
+  #logo .logo--group h2 {
+    font-size: 53px;
+  }
+  #logo .logo--group__btn--btn1 {
+    font-size: 12px;
+  }
+  #logo .logo--group__btn--btn2 {
+    font-size: 12px;
+  }
+  #logo .logo--group__image-two {
+    right: 6%;
+  }
+  #link .link--woths__btn h1 {
+    font-size: 33px;
+  }
+  link .link--woths__btn h2 {
+    font-size: 33px;
+  }
+  link .link--woths__one h1 {
+    font-size: 14px;
+  }
+  #link .link--woths__one p {
+    font-size: 11px;
+  }
+  #link .link--state__the h1 {
+    font-size: 21px;
+  }
+  #back .back--linke h1 {
+    font-size: 25px;
+  }
+  #back .back--linke h2 {
+    font-size: 25px;
+  }
+  #white .white--the h1 {
+    font-size: 26px;
+  }
+  #white .white--the p1 {
+    font-size: 11px;
+  }
+  #image .image--two h1 {
+    font-size: 25px;
+  }
+  #read {
+    padding: 81px 0;
+  }
+  #read .read--thew h1 {
+    font-size: 59px;
+  }
+  #read .read--thew p {
+    font-size: 16px;
+  }
+  #grown .grown--roth__good h1 {
+    font-size: 17px;
+  }
+  #grown .grown--roth__one h1 {
+    font-size: 17px;
+  }
+  #grown .grown--thet h1 {
+    font-size: 17px;
+  }
+  #grown .grown--thet h1 {
+    font-size: 17px;
+  }
+  #grown .grown--write h1 {
+    font-size: 15px;
+  }
+  #grown .grown--write h2 {
+    font-size: 15px;
+  }
+  #grown .grown--write__the h3 {
+    font-size: 15px;
+  }
+  #grown .grown--write__the h3 {
+    font-size: 15px;
+  }
+  #grown .grown--write__the h4 {
+    font-size: 15px;
+  }
+  #bluer .bluer--btn p {
+    font-size: 8px;
+    margin: 13px;
+  }
+  #bluer .bluer--were h1 {
+    font-size: 24px;
+  }
+  #bluer .bluer--were p {
+    font-size: 11px;
+  }
+  #bluer {
+    padding: 26px 0;
+  }
+  #bluer .bluer--write__the h1 {
+    font-size: 20px;
+  }
+  #bluer .bluer--write__the p {
+    font-size: 11px;
+  }
+  #bluer .bluer--write__thes p {
+    font-size: 11px;
+  }
+  #bluer .bluer--write__two p {
+    font-size: 11px;
+  }
+  #bluer .bluer--write__two h1 {
+    font-size: 20px;
+  }
+  #bluer .bluer--write__thes h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 414px) {
+  #logo .logo--group__btn--btn3 {
+    left: 3%;
+  }
+}
+@media (max-width: 400px) {
+  #logo .logo--group__btn--btn3 {
+    left: 1%;
+  }
+  #bluer .bluer {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #bluer .bluer--write {
+    flex-direction: column;
+    width: 90%;
+    /* display: flex; */
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 390px) {
+  #logo .logo--group__btn--btn3 {
+    left: 4%;
+    height: 349px;
+    width: 350px;
+  }
+  #logo .logo--group__btn--btn2 {
+    font-size: 9px;
+  }
+  #logo .logo--group__btn--btn1 {
+    font-size: 9px;
+  }
+}
+@media (max-width: 360px) {
+  #logo .logo--group__btn--btn3 {
+    left: 2%;
+  }
+  #logo .logo--group h1 {
+    font-size: 40px;
+    line-height: 57px;
+  }
+  #logo .logo--group h2 {
+    font-size: 23px;
+  }
+  #logo .logo--group__btn--btn3 {
+    left: 4%;
+    height: 300px;
+    width: 300px;
+  }
+  #image .image--two h1 {
+    font-size: 20px;
+  }
+  #back .back--linke {
+    margin: 1px 0;
+  }
+  #link .link--state__the h2 {
+    font-size: 13px;
+  }
+  #logo .logo--group__btn--btn1 {
+    font-size: 5px;
+  }
+  #logo .logo--group__btn--btn2 {
+    font-size: 5px;
+  }
+  #link .link--woths__btn h2 {
+    font-size: 33px;
+    line-height: 39px;
+  }
+  #white .white--the {
+    margin: 23px;
+  }
+  #read .read--thew h1 {
+    font-size: 33px;
+  }
+  #read .read--thew p {
+    font-size: 11px;
+  }
+  #read {
+    padding: 37px 0;
+  }
+  #grown .grown--thet h1 {
+    font-size: 11px;
+  }
+  #grown .grown--roth__one h1 {
+    font-size: 11px;
+  }
+  #grown .grown--roth__good h1 {
+    font-size: 11px;
+  }
+  #grown .grown--the h2 {
+    font-size: 19px;
+  }
+  #link .link--state__the h1 {
+    font-size: 15px;
+  }
+  #link .link--woths__btn h2 {
+    font-size: 23px;
+    line-height: 31px;
+  }
+  #link .link--woths__btn h1 {
+    font-size: 23px;
+  }
+  #bluer .bluer {
+    font-size: 11px;
+  }
+  #bluer .bluer--were h1 {
+    font-size: 14px;
+  }
+  #bluer .bluer--write__the h1 {
+    font-size: 14px;
+  }
+  #bluer .bluer--write__the p {
+    font-size: 9px;
+  }
+  #bluer .bluer--write__two p {
+    font-size: 9px;
+  }
+  #bluer .bluer--write__thes h1 {
+    font-size: 14px;
+  }
+  #bluer .bluer--write__thes h1 {
+    font-size: 14px;
+  }
+  #bluer .bluer--write__two h1 {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

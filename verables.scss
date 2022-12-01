@@ -1,0 +1,11 @@
+@mixin between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin hover-btn {
+  &:hover {
+    background: transparent;
+    transition: .4s;
+  }
+}

@@ -1,0 +1,781 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 5px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.scroll {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -82px 0 0 -167px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+#header {
+  background: #FFFFFF;
+  border-radius: 0px;
+  padding: 20px;
+}
+#header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+#header .header--menu a {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  text-transform: lowercase;
+  color: #222222;
+  margin: 0 20px;
+}
+
+#logo {
+  padding: 300px 0;
+  background: url("/img/anowne.png") no-repeat center/cover;
+}
+#logo .logo--group__inde {
+  position: absolute;
+  left: 7%;
+  top: 755px;
+}
+#logo .logo--group--one {
+  position: absolute;
+  left: 70%;
+  top: 250px;
+}
+#logo .logo--group__image {
+  position: absolute;
+  left: 0;
+  top: 58px;
+}
+#logo .logo--group__image-two {
+  position: absolute;
+  right: 10%;
+  top: 90px;
+}
+#logo .logo--group h1 {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 85px;
+  text-align: center;
+  color: #FFFFFF;
+}
+#logo .logo--group h2 {
+  font-weight: 400;
+  font-size: 70px;
+  text-align: center;
+  color: #FFFFFF;
+}
+#logo .logo--group__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 18%;
+}
+#logo .logo--group__btn--btn1 {
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 15px;
+  color: #FFFFFF;
+  background: #FD8558;
+  border: 1px solid orange;
+  padding: 15px 20px;
+  z-index: 1;
+}
+#logo .logo--group__btn--btn1:hover {
+  background: transparent;
+  transition: 0.4s;
+}
+#logo .logo--group__btn--btn3 {
+  border: 2px solid #8f8787;
+  height: 585px;
+  width: 600px;
+  position: absolute;
+  left: 30%;
+  background: transparent;
+  border-radius: 50%;
+}
+#logo .logo--group__btn--btn2 {
+  z-index: 1;
+  font-weight: 700;
+  font-size: 15px;
+  color: #FFFFFF;
+  border: 1px solid orange;
+  background: #FD8558;
+  padding: 15px 20px;
+}
+#logo .logo--group__btn--btn2:hover {
+  background: transparent;
+  transition: 0.4s;
+}
+
+#link .link--woths {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#link .link--woths__btn {
+  margin: 20px;
+}
+#link .link--woths__btn h1 {
+  font-weight: 400;
+  font-size: 40px;
+  color: #333333;
+}
+#link .link--woths__btn h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 54px;
+  color: #333333;
+}
+#link .link--woths__one h1 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #222222;
+}
+#link .link--woths__one p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+}
+#link .link--state {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#link .link--state__the h1 {
+  font-weight: 400;
+  font-size: 26px;
+  color: #222222;
+}
+#link .link--state__the h2 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #222222;
+}
+#link .link--state__the p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #CACACA;
+}
+
+#hero .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+#hero .hero--danc__ther h1 {
+  height: 39px;
+  left: 23.48%;
+  font-weight: 400;
+  font-size: 24px;
+  color: #333333;
+}
+#hero .hero--danc__ther p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+}
+#hero .hero--care__two h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #333333;
+}
+#hero .hero--care__two p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+}
+#hero .hero--about__one h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #333333;
+}
+#hero .hero--about__one p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+}
+#hero .hero--lines {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero .hero--lines__line {
+  border: 1px solid gray;
+}
+
+#back .back--lines {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#back .back--lines__line {
+  border: 1px solid gray;
+}
+#back .back--linke {
+  margin: 150px 0;
+}
+#back .back--linke p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #FD8558;
+}
+#back .back--linke h1 {
+  font-weight: 400;
+  font-size: 32px;
+  color: #333333;
+}
+#back .back--linke h2 {
+  font-weight: 400;
+  font-size: 32px;
+  color: #333333;
+}
+#back .back--white__knop {
+  text-align: end;
+}
+#back .back--white__knop button {
+  width: 82px;
+  font-weight: 200;
+  font-size: 12px;
+  color: #FFFFFF;
+  height: 30px;
+  background: #FD8558;
+  border-radius: 0px;
+}
+#back .back--white__one {
+  text-align: end;
+}
+#back .back--thero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#back .back--thero__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#white .white {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#white .white--the {
+  margin: 120px;
+}
+#white .white--the p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #FD8558;
+}
+#white .white--the h1 {
+  font-weight: 400;
+  font-size: 32px;
+  color: #222222;
+}
+#white .white--the p1 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+}
+#white .white--group__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#white .white--group__btn p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #222222;
+}
+#white .white--group__btn p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+}
+#white .white--group__linegrey {
+  width: 550px;
+  border: 3px solid lightgray;
+}
+#white .white--group__lineorage {
+  border: 2px solid orange;
+  width: 500px;
+  margin-top: -5px;
+}
+#white .white--read__one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#white .white--read__one p {
+  font-weight: 400;
+  font-size: 17px;
+  color: #222222;
+}
+#white .white--read__one p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+}
+#white .white--read__linegrey {
+  width: 500px;
+  border: 3px solid lightgray;
+}
+#white .white--read__lineorage {
+  border: 2px solid orange;
+  width: 500px;
+  margin-top: -5px;
+}
+#white .white--bloc__one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#white .white--bloc__one p {
+  font-weight: 400;
+  font-size: 17px;
+  color: #222222;
+}
+#white .white--bloc__one p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+}
+#white .white--bloc__linegrey {
+  width: 500px;
+  border: 3px solid lightgray;
+}
+#white .white--bloc__lineorage {
+  border: 2px solid orange;
+  width: 500px;
+  margin-top: -5px;
+}
+
+#image .image--two p {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #FD8558;
+}
+#image .image--two h1 {
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: #222222;
+}
+#image .image--bloc {
+  text-align: center;
+  margin: 30px 0;
+}
+#image .image--bloc__stat--one {
+  padding: 0 25px;
+}
+#image .image--bloc__stat__btn {
+  padding: 0 25px;
+}
+#image .image--bloc__stat--thet {
+  padding: 20px 0;
+}
+#image .image--bloc__stat--thet__two {
+  padding: 0 25px;
+}
+#image .image--bloc__stat--thet--btn2 {
+  padding: 0 25px;
+}
+#image .image--egg {
+  text-align: center;
+}
+#image .image--egg button {
+  width: 82px;
+  font-weight: 200;
+  font-size: 12px;
+  color: #FFFFFF;
+  height: 30px;
+  background: #FD8558;
+  border-radius: 0px;
+}
+
+#read {
+  background: #3A0F73;
+  padding: 300px 0;
+  margin: 60px 0;
+}
+#read .read--thew h1 {
+  font-weight: 400;
+  font-size: 200px;
+  text-align: center;
+  color: rgba(170, 170, 170, 0.1);
+}
+#read .read--thew p {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+#read .read--write {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#read .read--write p {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+}
+#read .read--write h1 {
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#grown .grown--the p {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #FD8558;
+}
+#grown .grown--the h2 {
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: #222222;
+  margin: 30px 0;
+}
+#grown .grown--roth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#grown .grown--roth__good p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #FD8558;
+}
+#grown .grown--roth__good .p1 {
+  font-weight: 400;
+  font-size: 15px;
+  color: #FD8558;
+}
+#grown .grown--roth__good h2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+}
+#grown .grown--roth__good h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #222222;
+}
+#grown .grown--roth__good h3 {
+  font-weight: 400;
+  font-size: 15px;
+  color: #FD8558;
+}
+#grown .grown--roth__one p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #FD8558;
+}
+#grown .grown--roth__one h1 {
+  font-weight: 400;
+  font-size: 15px;
+  color: #FD8558;
+}
+#grown .grown--roth__one h2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+}
+#grown .grown--roth__one h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #222222;
+}
+#grown .grown--roth__one h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #FD8558;
+}
+#grown .grown--thet p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #FD8558;
+}
+#grown .grown--thet h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #222222;
+}
+#grown .grown--thet h3 {
+  font-weight: 400;
+  font-size: 15px;
+  color: #FD8558;
+}
+#grown .grown--write {
+  margin: 50px 0;
+}
+#grown .grown--write p {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(34, 34, 34, 0.4);
+}
+#grown .grown--write h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #222222;
+}
+#grown .grown--write h2 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #222222;
+}
+#grown .grown--write__the {
+  margin: 50px 0;
+}
+#grown .grown--write__the h2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(34, 34, 34, 0.4);
+}
+#grown .grown--write__the h3 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #222222;
+}
+#grown .grown--write__the h4 {
+  font-weight: 400;
+  font-size: 23px;
+  color: #222222;
+}
+#grown .grown--thes {
+  text-align: center;
+}
+#grown .grown--thes button {
+  width: 132px;
+  font-weight: 200;
+  font-size: 12px;
+  color: #FFFFFF;
+  height: 30px;
+  background: #FD8558;
+  border-radius: 0;
+  margin: 50px;
+}
+
+#bluer {
+  background: #111111;
+  padding: 150px 0;
+  margin: 20px 0;
+}
+#bluer .bluer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#bluer .bluer--block {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bluer .bluer--were h1 {
+  font-weight: 400;
+  font-size: 40px;
+  color: #FFFFFF;
+}
+#bluer .bluer--were p {
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+#bluer .bluer--were p {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+#bluer .bluer--write {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#bluer .bluer--write__the h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+#bluer .bluer--write__the p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #BABABA;
+}
+#bluer .bluer--write__thes h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+#bluer .bluer--write__thes p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #BABABA;
+}
+#bluer .bluer--write__two h1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+#bluer .bluer--write__two p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #BABABA;
+}
+#bluer .bluer--btn p {
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: #BABABA;
+  margin: 120px;
+}
+
+/*# sourceMappingURL=style.css.map */
